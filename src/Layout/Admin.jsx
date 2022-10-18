@@ -29,9 +29,9 @@ const Admin = () => {
             <div className="">
                 <AdminSidebar />
             </div>
-            <div className="px-5 py-3">
+            <div className="px-5 py-3 flex-1 bg-gradient-to-b from-[#1865d8] to-[#09c699]">
                 {/* Navbar */}
-                Admin
+                {/* Admin */}
                 {component}
             </div>
 
