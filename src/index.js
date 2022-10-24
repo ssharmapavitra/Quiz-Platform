@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 // Pages
 import Landing from "./Pages/Landing.jsx";
@@ -14,6 +15,7 @@ import "./assets/stylesheet/style.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+      <ProSidebarProvider>
     <Router>
         <Routes>
             <Route path="/" element={<Landing/> }></Route>
@@ -24,6 +26,6 @@ root.render(
             <Route path="/user" element={<User/> }></Route>
             <Route path="/user/:path" element={<User/> }></Route>
         </Routes>
-    </Router>
+    </Router></ProSidebarProvider>
   </React.StrictMode>
 );

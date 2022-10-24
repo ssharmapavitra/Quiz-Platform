@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 
 // components
 import {adminRoutes} from "../Routes";
+import AdminSidebar from "../Components/Admin/Sidebar";
 
 const Admin = () => {
 
@@ -17,19 +18,20 @@ const Admin = () => {
                         setComponent(route.component);
                     }
             })
-            return null;
         }
-        if(component === null)
+        else{
             setComponent(<div>Page Not Found</div>);
-    },[]);
+        }
+    },[path]);
 
     return (
-        <div>
-            <div>
-                Admin
+        <div className="flex">
+            <div className="">
+                <AdminSidebar />
             </div>
-            <div>
+            <div className="px-5 py-3 flex-1 bg-gradient-to-b from-[#1865d8] to-[#09c699]">
                 {/* Navbar */}
+                {/* Admin */}
                 {component}
             </div>
 
